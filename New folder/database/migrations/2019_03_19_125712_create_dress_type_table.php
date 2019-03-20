@@ -15,6 +15,7 @@ class CreateDressTypeTable extends Migration
     {
         Schema::create('dress_type', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }

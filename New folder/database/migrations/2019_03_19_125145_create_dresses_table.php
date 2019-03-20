@@ -15,6 +15,10 @@ class CreateDressesTable extends Migration
     {
         Schema::create('dresses', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('size');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('category_sevices');
+            $table->foreign('id_dress_type')->references('id')->on('dress_type');
             $table->timestamps();
         });
     }

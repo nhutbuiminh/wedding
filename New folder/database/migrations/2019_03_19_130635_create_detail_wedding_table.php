@@ -15,6 +15,9 @@ class CreateDetailWeddingTable extends Migration
     {
         Schema::create('detail_wedding', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('detail');
+            $table->foreign('id_service')->references('id')->on('wedding_services');
             $table->timestamps();
         });
     }

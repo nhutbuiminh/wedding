@@ -15,6 +15,10 @@ class CreateImageDressTable extends Migration
     {
         Schema::create('image_dress', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('image');
+            $table->foreign('id_dress')->references('id')->on('dresses');
+
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreatePhotographyServicesTable extends Migration
     {
         Schema::create('photography_services', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('detail');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('category_sevices');
             $table->timestamps();
         });
     }
