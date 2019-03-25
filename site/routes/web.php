@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/left', function(){
+    return view('left-sidebar');
+});
+Route::get('/right', function(){
+    return view('right-sidebar');
+});
+Route::get('/no', function(){
+    return view('no-sidebar');
+});

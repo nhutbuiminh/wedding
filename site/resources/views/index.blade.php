@@ -9,6 +9,7 @@
 		<title>Escape Velocity by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{{asset('css/main.css')}}" />
 	</head>
 	<body class="homepage is-preload">
@@ -19,14 +20,14 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Escape Velocity</a></h1>
+							<h1><a action="{{Route::get('/')}}">Escape Velocity</a></h1>
 							<p>A free responsive site template by HTML5 UP</p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
+								<li class="current"><a action="{{Route::get('/')}}">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -46,9 +47,9 @@
 										<li><a href="#">Nisl tempus</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><form action="{{route::get('/left')}}" method="get"><a>Left Sidebar</a></form></li>
+								<li><a action="{{route::get('/right')}}">Right Sidebar</a></li>
+								<li><a action="{{route::get('/no')}}">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -79,7 +80,7 @@
 
 						<!-- Image -->
 							<a href="#" class="image featured">
-								<img src="images/pic01.jpg" alt="" />
+								<img src="{{asset('images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg')}}" alt="" />
 							</a>
 
 						<!-- Features -->
@@ -144,7 +145,7 @@
 						<div class="row aln-center">
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="#" class="image featured"><img src="{{asset('images/petr-ovralov-239624-unsplash.jpg')}}" alt="" /></a>
 									<h3><a href="#">Aliquam diam consequat</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
@@ -154,7 +155,7 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="#" class="image featured"><img src="{{asset('images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg')}}" alt="" /></a>
 									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
@@ -164,7 +165,7 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+									<a href="#" class="image featured"><img src="{{asset('images/photo-nic-co-uk-nic-133995-unsplash.jpg')}}" alt="" /></a>
 									<h3><a href="#">Mattis tempus lorem</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
@@ -274,9 +275,10 @@
 			<script src="{{asset('js/jquery.min.js')}}"></script>
 			<script src="{{asset('js/jquery.dropotron.min.js')}}"></script>
 			<script src="{{asset('js/browser.min.js')}}"></script>
+			<script src="{{asset('js/main.js')}}"></script>
 			<script src="{{asset('js/breakpoints.min.js')}}"></script>
 			<script src="{{asset('js/util.js')}}"></script>
-			<script src="{{asset('js/main.js')}}"></script>
+			
 
 	</body>
 </html>
