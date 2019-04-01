@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetailWeddingTable extends Migration
+class CreateDetailWeddingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDetailWeddingTable extends Migration
      */
     public function up()
     {
-        Schema::create('detail_wedding', function (Blueprint $table) {
+        Schema::create('detail_weddings', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('detail');
+            $table->integer('service_id');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDetailWeddingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_wedding');
+        Schema::dropIfExists('detail_weddings');
     }
 }

@@ -20,36 +20,25 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a action="{{Route::get('/')}}">Escape Velocity</a></h1>
+							<h1><a href="#">Sweet Bouqute</a></h1>
 							<p>A free responsive site template by HTML5 UP</p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a action="{{Route::get('/')}}">Home</a></li>
+								<li class="current"><a href="{{route('home')}}" >Home</a></li>
 								<li>
-									<a href="#">Dropdown</a>
+									<a href="#">Services</a>
 									<ul>
 										<li><a href="#">Lorem ipsum</a></li>
 										<li><a href="#">Magna veroeros</a></li>
 										<li><a href="#">Etiam nisl</a></li>
-										<li>
-											<a href="#">Sed consequat</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Amet consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Sed feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Nisl tempus</a></li>
 									</ul>
 								</li>
-								<li><form action="{{route::get('/left')}}" method="get"><a>Left Sidebar</a></form></li>
-								<li><a action="{{route::get('/right')}}">Right Sidebar</a></li>
-								<li><a action="{{route::get('/no')}}">No Sidebar</a></li>
+								<li><a href="{{route('leftSlidebar')}}">Dresses</a></li>
+								<li><a href="{{route('rightSlidebar')}}">Album</a></li>
+								<li><a href="{{route('noSlidebar')}}">Contact</a></li>
 							</ul>
 						</nav>
 
@@ -59,14 +48,17 @@
 				<section id="intro" class="wrapper style1">
 					<div class="title">The Introduction</div>
 					<div class="container">
-						<p class="style1">So in case you were wondering what this is all about ...</p>
+						<p class="style1">WELCOME TO
+							SWEET BOUQUET BRIDAL</p>
 						<p class="style2">
-							Escape Velocity is a free responsive<br class="mobile-hide" />
-							site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
+							AT SWEETBOUQUET, WE BELIEVE THAT
+							EVERY WEDDING DRESS HAS DESTINATION ITSELF
+							and you would find out yours
+						<br class="mobile-hide" />
+ 						<a href="{{route('home')}}" class="nobr">• WHEN YOU TOUCH IT •</a>
 						</p>
-						<p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
-						free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
-						your personal or commercial projects &ndash; just be sure to credit us!</p>
+						<p class="style3">Retelling the sweet love story of each couple, it's also something Sweet Bouquet always puts in a lot of passion for.
+						</p>
 						<ul class="actions">
 							<li><a href="#" class="button style3 large">Proceed</a></li>
 						</ul>
@@ -80,14 +72,14 @@
 
 						<!-- Image -->
 							<a href="#" class="image featured">
-								<img src="{{asset('images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg')}}" alt="" />
+								<img src="{{asset('css/images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg')}}" alt="" />
 							</a>
 
 						<!-- Features -->
 							<section id="features">
 								<header class="style1">
-									<h2>Dolor consequat feugiat amet veroeros</h2>
-									<p>Feugiat dolor nullam orci pretium phasellus justo</p>
+									<h2>Đến với Sweet Bouquet bạn sẽ được tận hưởng những dịch vụ tốt nhất</h2>
+									<p></p>
 								</header>
 								<div class="feature-list">
 									<div class="row">
@@ -140,13 +132,13 @@
 
 			<!-- Highlights -->
 				<section id="highlights" class="wrapper style3">
-					<div class="title">The Endorsements</div>
+					<div class="title">Services</div>
 					<div class="container">
 						<div class="row aln-center">
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('images/petr-ovralov-239624-unsplash.jpg')}}" alt="" /></a>
-									<h3><a href="#">Aliquam diam consequat</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/petr-ovralov-239624-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Dresses</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="#" class="button style1">Learn More</a></li>
@@ -155,8 +147,8 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg')}}" alt="" /></a>
-									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/photo-nic-co-uk-nic-133995-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Photography</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="#" class="button style1">Learn More</a></li>
@@ -165,8 +157,8 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('images/photo-nic-co-uk-nic-133995-unsplash.jpg')}}" alt="" /></a>
-									<h3><a href="#">Mattis tempus lorem</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/photo-nic-co-uk-nic-133995-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Wedding Services</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="#" class="button style1">Learn More</a></li>
@@ -200,6 +192,12 @@
 												</div>
 												<div class="col-6 col-12-small">
 													<input type="text" name="email" id="contact-email" placeholder="Email" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="address" id="contact-address" placeholder="Address" />
+												</div>
+												<div class="col-6 col-12-small">
+													<input type="text" name="Phone" id="contact-Phone" placeholder="Phone number" />
 												</div>
 												<div class="col-12">
 													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
@@ -276,9 +274,7 @@
 			<script src="{{asset('js/jquery.dropotron.min.js')}}"></script>
 			<script src="{{asset('js/browser.min.js')}}"></script>
 			<script src="{{asset('js/main.js')}}"></script>
-			<script src="{{asset('js/breakpoints.min.js')}}"></script>
 			<script src="{{asset('js/util.js')}}"></script>
-			
-
+			<script src="{{asset('js/breakpoints.min.js')}}"></script>
 	</body>
 </html>

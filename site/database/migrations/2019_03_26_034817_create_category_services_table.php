@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImageDressTable extends Migration
+class CreateCategoryServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateImageDressTable extends Migration
      */
     public function up()
     {
-        Schema::create('image_dress', function (Blueprint $table) {
+        Schema::create('category_services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('image');
-            $table->foreign('id_dress')->references('id')->on('dresses');
-
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateImageDressTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('image_dress');
+        Schema::dropIfExists('category_services');
     }
 }

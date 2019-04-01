@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWeddingServicesTable extends Migration
+class CreateDressTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateWeddingServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('wedding_services', function (Blueprint $table) {
+        Schema::create('dress_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('category_sevices');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateWeddingServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wedding_services');
+        Schema::dropIfExists('dress_types');
     }
 }
