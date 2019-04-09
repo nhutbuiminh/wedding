@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class wedding_services extends Model
 {
+    protected $fillable = ['id', 'name','category_id'];
     public function category()
     {
         return $this->belongTo('App\category_services');

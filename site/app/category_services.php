@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class category_services extends Model
 {
+    protected $fillable = ['id', 'name'];
     public function dress()
     {
         return $this->hasOne('App\dresses');

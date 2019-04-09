@@ -23,3 +23,7 @@ Route::get('/right', function(){
 Route::get('/no', function(){
     return view('no-sidebar');
 })->name('noSlidebar');
+//category
+Route::get('/admin/index', 'CategoryServicesController@index' )->name('category.index');
+Route::get('/admin/create', 'CategoryServicesController@create' )->name('category.create');
+//auth
