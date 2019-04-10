@@ -27,3 +27,6 @@ Route::get('/no', function(){
 Route::get('/admin/index', 'CategoryServicesController@index' )->name('category.index');
 Route::get('/admin/create', 'CategoryServicesController@create' )->name('category.create');
 //auth
+
+Route::resource('auth','authController');
+Route::get('/admin/register', 'HomeController@index')->name('home');
