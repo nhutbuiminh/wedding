@@ -1,10 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\dresses;
+use App\category_services;
 use Illuminate\Http\Request;
-
+use App\dresses;
+use App\Http\Requests\createProductRequest;
+use Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use App\image_dress;
 class DressesController extends Controller
 {
     /**
@@ -15,8 +17,9 @@ class DressesController extends Controller
     public function index()
     {
         //
+        $dresses = Dresses::paginate(20);
+        return view('admin.list-product', ['dress'=> $dresses]);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -24,64 +27,128 @@ class DressesController extends Controller
      */
     public function create()
     {
-        
+        //
+        //$categories = Category::all();
+    return view('admin.add-product', /*['categories' => $categories]*/);
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(createProductRequest $request)
     {
-        $dresses = new dresses();
-        $dresses->name = $request->name;
-        $dresses->dress_type_id = $request->dress_type_id;
+        
+        //store
+        $dresses = new dress;
+        $dresses->
+        $car->name = $request->name;
+        $car->year = $request->year;
+        $car->body_style = $request->body_style;
+        $car->engine = $request->engine;
+        $car->price = $request->price;
+        $car->transmission = $request->transmission;
+        $car->color = $request->color;
+        $car->fuel_style = $request->fuel_style; 
+        $car->category_id = $request->categories;
+        //upload image to database
+        $filename = $request->file('image')->getClientOriginalName();
+        $path = public_path('img');
+        $request->file('image')->move($path, $filename);
+        $car->image = $filename;
+        $car->description = $request->description;
+        $car->save();
+        //upload images to images_product table
+        
+        if($request->hasfile('images_list'))
+        {
+            foreach($request->file('images_list') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $path = public_path('img');
+                $file->move($path, $name);
+                $images[] = $name;
+            }
+        }
+        $images_product = new images_product;
+        $images_product->photo = json_encode($images);
+        $images_product->car_id = $car->id;
+        $images_product->save();
+        return redirect()->route('admin.index');
     }
-
     /**
      * Display the specified resource.
      *
-     * @param  \App\dresses  $dresses
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(dresses $dresses)
+    public function show($id)
     {
         //
+        $car =car::find($id);
+        return view('admin.show', ['car' =>$car]);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\dresses  $dresses
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(dresses $dresses)
+    public function edit($id)
     {
         //
+        $car = car::find($id);
+    return view('admin.edit', ['car' => $car]);
     }
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\dresses  $dresses
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, dresses $dresses)
+    public function update(Request $request, $id)
     {
         //
+        
+        $car = car::find($id);
+        $car->name = $request->name;
+        $car->year = $request->year;
+        $car->body_style = $request->body_style;
+        $car->engine = $request->engine;
+        $car->price = $request->price;
+        $car->transmission = $request->transmission;
+        $car->color = $request->color;
+        $car->fuel_style = $request->fuel_style; 
+        $car->category_id = $request->categories;
+        //upload image to database
+        $filename = $request->file('image')->getClientOriginalName();
+        $path = public_path('img');
+        $request->file('image')->move($path, $filename);
+        $car->image = $filename;
+        $car->description = $request->description;
+        $car->best_sale = $request->best_sale;
+        $car->deal_of_week = $request->deal_of_week;
+        $car->save();
+        return redirect()->route('admin.index');
     }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\dresses  $dresses
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(dresses $dresses)
+    public function destroy($id)
     {
         //
+        $car = car::find($id);
+        $car->delete();
+        return redirect()->route('admin.index');
     }
+    public function home()
+    {
+        return view('admin.home');
+    }
+   
 }

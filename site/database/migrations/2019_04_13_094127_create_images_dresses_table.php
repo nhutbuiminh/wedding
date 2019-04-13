@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDressesTable extends Migration
+class CreateImagesDressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateDressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dresses', function (Blueprint $table) {
+        Schema::create('images_dresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('dress_type_id');
-            $table->string('color')->nullable();
-            $table->longText('image')->nullable();
-            $table->longText('description')->nullable();
-            $table->double('price')->nullable();
+            $table->integer('dresses_id')->unsigned();
+            $table->longText('photo');
+            $table->foreign('dresses_id')->references('id')->on('dresses');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateDressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dresses');
+        Schema::dropIfExists('images_dresses');
     }
 }

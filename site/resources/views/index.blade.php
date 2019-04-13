@@ -187,10 +187,10 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="#">
+										<form method="post" action="{{route()}}">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
+													<input type="text" name="customer_name" id="contact-name" placeholder="Name" />
 												</div>
 												<div class="col-6 col-12-small">
 													<input type="text" name="email" id="contact-email" placeholder="Email" />
@@ -199,7 +199,7 @@
 													<input type="text" name="address" id="contact-address" placeholder="Address" />
 												</div>
 												<div class="col-6 col-12-small">
-													<input type="text" name="Phone" id="contact-Phone" placeholder="Phone number" />
+													<input type="text" name="phone" id="contact-Phone" placeholder="Phone number" />
 												</div>
 												<div class="col-12">
 													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
