@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\CheckUser;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,9 +28,26 @@ Route::get('categories/create', 'categoriesController@create')->name('category.c
 Route::post('categories/store', 'categoriesController@store')->name('category.store');
 Auth::routes();
 //auth
-Auth::routes();
-Route::resource('/auth','authController');
-Route::get('/admin/register', 'HomeController@index')->name('home');
+ Users
+
+Route::resource('auth','authController');
+// Route::get('/admin/register', 'HomeController@index')->name('home');
+
+
+Route::get('auth/admin', 'authController@login')->name('auth.login');
+// Route::post('authentication', 'authController@authLogin')->name('auth');
+Route::get('/auth/create', 'authController@create')->name('auth.create');
+Route::post('/auth/store', 'authController@store')->name('auth.store');
+Route::get('/auth/logout',  'authController@logout' )->name('auth.logout');
+ Route::get('/auth', 'authController@index')->name('auth.index');
+Route::get('auth/show/{id}', 'authController@show')->name('auth.show');
+Route::get('auth/edit/{id}', 'authController@edit')->name('auth.edit');
+Route::post('auth/update/{id}', 'authController@update')->name('auth.update');
+Route::delete('auth/delete/{id}', 'authController@destroy')->name('auth.destroy'); 
+
+ 
+
+
 
 
 //dress-admin
@@ -45,3 +62,4 @@ Route::delete('admin/delete/{id}', 'DressesController@destroy')->name('dress.des
 //order
 Route::get('/order/{id}', 'orderController@create')->name('order.create');
 Route::post('/order/store/', 'orderController@store')->name('order.store');
+
