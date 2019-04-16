@@ -9,11 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/assets/images/favicon.png')}}">
     <title>Thêm Sản Phẩm</title>
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('/admin/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('/admin/assets/plugins/icheck/skins/all.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/assets/plugins/icheck/skins/all.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.css')}}" />
     <!-- Custom CSS -->
     <link href="{{asset('admin/car-admin/css/style.css')}}" rel="stylesheet">
@@ -450,19 +450,19 @@
                             <div class="card-body">
                                 <h4 class="card-title">sửa thông tin sản phẩm</h4>
                                 <h6 class="card-subtitle">Giao diện trang sửa thông tin sản phẩm</h6>
-                                <form class="form-material m-t-40" action="{{route('admin.update', $car->id)}}" method="POST" enctype="multipart/form-data">
+                                <form class="form-material m-t-40" action="{{route('admin.update', $dress->id)}}" method="POST" enctype="multipart/form-data">
                                     <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
                                     <div class="form-group">
                                         <label>Tên sản phẩm</label>
-                                        <input type="text" class="form-control form-control-line" name="name" value="{{$car->name}}">
+                                        <input type="text" class="form-control form-control-line" name="name" value="{{$dress->name}}">
                                         <p class="help is-danger">{{ $errors->first('name') }}</p>
                                     </div>
                                     <div class="form-group">
-                                        <label>năm sản xuất</label>
-                                        <input type="text" class="form-control form-control-line" name="year" value="{{$car->year}}"/>
-                                        <p class="help is-danger">{{ $errors->first('year') }}</p>
+                                        <label>Kiểu dáng</label>
+                                        <input type="text" class="form-control form-control-line" name="year" value="{{$car->dress_type_id}}"/>
+                                        <p class="help is-danger">{{ $errors->first('dress_type_id') }}</p>
                                     </div>
-                                    {{-- <div class="form-group">
+                                    <!-- {{-- <div class="form-group">
                                         <label for="brand">Hãng</label>
                                         <select class="custom-select form-control-line" id="inputGroupSelect01" name="categories">
                                             <option selected disabled>Choose...</option>
@@ -470,37 +470,27 @@
                                             <option value="{{$category->id}}">{{$category->name}}</option>
                                             @endforeach
                                         </select>
-                                    </div> --}}
+                                    </div> --}} -->
                                     <div class="form-group">
                                         <label for="brand" >Giá</label>
-                                        <input type="text" class="form-control form-control-line" name="price" placeholder="USD$" value={{$car->price}}>
+                                        <input type="text" class="form-control form-control-line" name="price" placeholder="USD$" value={{$dress->price}}>
                                         <p class="help is-danger">{{ $errors->first('price') }}</p>
                                     </div>
                                     <div class="form-group">
-                                        <label for="brand">hộp số</label>
-                                        <input type="text" class="form-control form-control-line" name="transmission" value="{{$car->transmission}}">
-                                        <p class="help is-danger">{{ $errors->first('transmission') }}</p>
+                                        <label>Màu sắc</label>
+                                        <div class="input-group">
+                                            <ul class="icolors">
+                                                <li class="black"></li>
+                                                <li class="red active"></li>
+                                                <li class="green"></li>
+                                                <li class="blue"></li>
+                                                <li class="orange"></li>
+                                                <li class="yellow"></li>
+                                                <li class="purple"></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>body style</label>
-                                    <input type="text" class="form-control form-control-line"              name="body_style" value="{{$car->body_style}}">
-                                    <p class="help is-danger">{{ $errors->first('body_style') }}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>động cơ</label>
-                                        <input type="text" class="form-control form-control-line" name="engine" value="{{$car->engine}}">
-                                        <p class="help is-danger">{{ $errors->first('engine') }}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>màu sắc</label>
-                                        <input type="text" class="form-control form-control-line" name="color" value="{{$car->color}}">
-                                        <p class="help is-danger">{{ $errors->first('color') }}</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>nhiên liệu</label>
-                                        <input type="text" class="form-control form-control-line" name="fuel_style" value="{{$car->fuel_style}}">
-                                        <p class="help is-danger">{{ $errors->first('fuel_style') }}</p>
-                                    </div>
+                                    
                                     <div class="form-group">
                                         <label>hình ảnh</label>         
                                         <input type="file" name="image" class="form-control"> 

@@ -16,7 +16,7 @@ class CreateDressesTable extends Migration
         Schema::create('dresses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('dress_type_id');
+            $table->string('dress_type_id');
             $table->string('color')->nullable();
             $table->longText('image')->nullable();
             $table->longText('description')->nullable();

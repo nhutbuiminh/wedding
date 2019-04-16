@@ -366,7 +366,7 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Ao cuoi</span></a>
                             <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('dress.create')}}">Thêm mới</a></li>
-                                <li><a href="{{route('dress.edit')}}">Quản lý</a></li>
+                                <li><a href="{{route('dress.index')}}">Quản lý</a></li>
                                 <li><a href="{{route('dress.index')}}">Danh mục ao cuoi</a></li>
                             </ul>
                         </li>
@@ -450,64 +450,56 @@
                             <div class="card-body">
                                 <h4 class="card-title">Thêm sản phẩm</h4>
                                 <h6 class="card-subtitle">Giao diện trang thêm mới sản phẩm</h6>
-                                <form class="form-material m-t-40">
+                                <form class="form-material m-t-40" action="{{route('dress.store')}}" method="post" enctype="multipart/form-data">
+                                    <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
                                     <div class="form-group">
-                                        <label>Tên sản phẩm</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: C250..."> </div>
+                                        <label>Tên váy</label>
+                                        <input type="text" class="form-control form-control-line" name="name">
+                                        <p class="text-danger">{{ $errors->first('name') }}</p>
+                                    </div>
                                     <div class="form-group">
-                                        <label for="brand">Hãng</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: Mercedes..."> </div>
+                                        <label>Kiểu váy</label>
+                                        <input type="text" class="form-control form-control-line" name="year">
+                                        <p class="text-danger">{{ $errors->first('dress_type_id') }}</p>
+                                    </div>
                                     <div class="form-group">
-                                        <label for="brand">Giá</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: 1.750.000.000 đ"> </div>
+                                        <label for="brand" >Giá</label>
+                                        <input type="text" class="form-control form-control-line" name="price" placeholder="USD$">
+                                        <p class="text-danger">{{ $errors->first('price') }}</p>
+                                    </div>
+                                   
                                     <div class="form-group">
-                                        <label>Màu sắc</label>
-                                        <div class="input-group">
-                                            <ul class="icolors">
-                                                <li class="black"></li>
-                                                <li class="red active"></li>
-                                                <li class="green"></li>
-                                                <li class="blue"></li>
-                                                <li class="orange"></li>
-                                                <li class="yellow"></li>
-                                                <li class="purple"></li>
-                                            </ul>
+                                        <label>màu sắc</label>
+                                        <input type="text" class="form-control form-control-line" name="color">
+                                        <p class="text-danger">{{ $errors->first('color') }}</p>
+                                    </div>
+                                 
+                                    <div class="form-group">
+                                        <label>hình ảnh</label>         
+                                        <input type="file" name="image" class="form-control"> 
+                                        <p class="text-danger">{{ $errors->first('image') }}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>thêm ảnh chi tiết cho sản phẩm</label>                <input id="" class="form-control" type="file" name='images_list[]' multiple="multiple">                  
+                                        <p class="text-danger">{{ $errors->first('images_list') }}</p>
+                                    </div>
+                                    <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Chi tiết sản phẩm</h4>
+                                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
+                                                <div class="form-group">
+                                                <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..." name="description">
+                                                </textarea>
+                                            </div>
+                                            <p class="text-danger">{{ $errors->first('description') }}</p>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Mô tả ngắn</label>
-                                        <textarea class="form-control" rows="5"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Hình đại diện</label>
-                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                            <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                            <input type="hidden">
-                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
-                                    </div>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Đăng sản phẩm</button>
                                 </form>
                             </div>
                         </div>
                         
                     </div>
-                </div>
-
-                <!-- .row -->
-                <div class="row">
-                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Chi tiết sản phẩm</h4>
-                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
-                                <form method="post">
-                                    <div class="form-group">
-                                        <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..."></textarea>
-                                    </div>
-                                </form>
-                                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Đăng sản phẩm</button>
-                            </div>
-                        </div>
-                    </div>      
                 </div>
                 <!-- /.row -->
 

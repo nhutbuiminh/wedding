@@ -3,10 +3,9 @@ namespace App\Http\Controllers;
 use App\category_services;
 use Illuminate\Http\Request;
 use App\dresses;
-use App\Http\Requests\createProductRequest;
 use Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use App\image_dress;
+use App\image_dresses;
 class DressesController extends Controller
 {
     /**
@@ -18,7 +17,7 @@ class DressesController extends Controller
     {
         //
         $dresses = Dresses::paginate(20);
-        return view('admin.list-product', ['dress'=> $dresses]);
+        return view('admin.index', ['dress'=> $dresses]);
     }
     /**
      * Show the form for creating a new resource.
@@ -29,7 +28,7 @@ class DressesController extends Controller
     {
         //
         //$categories = Category::all();
-    return view('admin.add-product', /*['categories' => $categories]*/);
+    return view('admin.add-product'/*, ['categories' => $categories]*/);
     }
     /**
      * Store a newly created resource in storage.
@@ -37,28 +36,22 @@ class DressesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(createProductRequest $request)
+    public function store(Request $request)
     {
         
         //store
-        $dresses = new dress;
-        $dresses->
-        $car->name = $request->name;
-        $car->year = $request->year;
-        $car->body_style = $request->body_style;
-        $car->engine = $request->engine;
-        $car->price = $request->price;
-        $car->transmission = $request->transmission;
-        $car->color = $request->color;
-        $car->fuel_style = $request->fuel_style; 
-        $car->category_id = $request->categories;
+        $dresses = new Dresses;
+        $dresses->name = $request->name;
+        $dresses->dress_type_id = $request->dress_type_id;
+        $dresses->price = $request->price;
+        $dresses->color = $request->color;
         //upload image to database
         $filename = $request->file('image')->getClientOriginalName();
         $path = public_path('img');
         $request->file('image')->move($path, $filename);
-        $car->image = $filename;
-        $car->description = $request->description;
-        $car->save();
+        $dresses->image = $filename;
+        $dresses->description = $request->description;
+        $dresses->save();
         //upload images to images_product table
         
         if($request->hasfile('images_list'))
@@ -71,10 +64,10 @@ class DressesController extends Controller
                 $images[] = $name;
             }
         }
-        $images_product = new images_product;
-        $images_product->photo = json_encode($images);
-        $images_product->car_id = $car->id;
-        $images_product->save();
+        $images_dresses = new images_product;
+        $images_dresses->photo = json_encode($images);
+        $images_dresses->dresses_id = $dresses->id;
+        $images_dresses->save();
         return redirect()->route('admin.index');
     }
     /**
@@ -98,8 +91,9 @@ class DressesController extends Controller
     public function edit($id)
     {
         //
-        $car = car::find($id);
-    return view('admin.edit', ['car' => $car]);
+        $dress = dresses::find($id);
+        
+    return view('admin.edit', compact(dress));
     }
     /**
      * Update the specified resource in storage.

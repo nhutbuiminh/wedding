@@ -239,7 +239,7 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- User profile -->
-                <div class="user-profile" style="background: url({{asset('admin/assets/images/background/user-info.jpg) no-repeat;')}}">
+                <div class="user-profile" style="background: url({{asset('admin/assets/images/background/user-info.jpg')}} no-repeat;">
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
@@ -271,7 +271,7 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('dress.create')}}">Thêm mới</a></li>
-                                <li><a href="{{route('dress.edit')}}">Quản lý</a></li>
+                                <li><a href="{{route('dress.edit',$dress->id)}}">Quản lý</a></li>
                                 <li><a href="{{route('dress.index')}}">Danh mục sản phẩm</a></li>
                             </ul>
                         </li>

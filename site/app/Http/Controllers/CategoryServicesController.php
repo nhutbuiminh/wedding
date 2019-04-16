@@ -24,7 +24,7 @@ class CategoryServicesController extends Controller
      */
     public function create()
     {
-        return view('admin.add-product');
+        return view('categories.create');
     }
 
     /**
@@ -36,6 +36,10 @@ class CategoryServicesController extends Controller
     public function store(Request $request)
     {
         //
+        $categories = new category;
+        $categories->name = $request->name;
+        $categories->save();
+        return redirect()->route('category.create');
     }
 
     /**

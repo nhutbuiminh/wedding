@@ -19,8 +19,8 @@ class CreateOdersTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->integer('phone');
-            $table->integer('car_id')->unsigned();
-            $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
+            // $table->integer('car_id')->unsigned();
+            // $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->timestamps();
         });
     }
