@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\CheckUser;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +29,18 @@ Route::get('/admin/create', 'CategoryServicesController@create' )->name('categor
 //auth
 
 Route::resource('auth','authController');
-Route::get('/admin/register', 'HomeController@index')->name('home');
+// Route::get('/admin/register', 'HomeController@index')->name('home');
+
+
+Route::get('auth/admin', 'authController@login')->name('auth.login');
+// Route::post('authentication', 'authController@authLogin')->name('auth');
+Route::get('/auth/create', 'authController@create')->name('auth.create');
+Route::post('/auth/store', 'authController@store')->name('auth.store');
+Route::get('/auth/logout',  'authController@logout' )->name('auth.logout');
+ Route::get('/auth', 'authController@index')->name('auth.index');
+Route::get('auth/show/{id}', 'authController@show')->name('auth.show');
+Route::get('auth/edit/{id}', 'authController@edit')->name('auth.edit');
+Route::post('auth/update/{id}', 'authController@update')->name('auth.update');
+Route::delete('auth/delete/{id}', 'authController@destroy')->name('auth.destroy'); 
+
+ 
