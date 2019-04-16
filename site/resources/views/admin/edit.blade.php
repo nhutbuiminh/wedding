@@ -10,13 +10,15 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/assets/images/favicon.png')}}">
-    <title>Quản lý sản phẩm</title>
+    <title>Thêm Sản Phẩm</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('admin/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/assets/plugins/icheck/skins/all.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.css')}}" />
     <!-- Custom CSS -->
-    <link href="{{asset('admin/pro-admin/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/car-admin/css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="{{asset('admin/pro-admin/css/colors/blue.css')}}" id="theme" rel="stylesheet">
+    <link href="{{asset('admin/car-admin/css/colors/blue.css')}}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -178,8 +180,6 @@
                         <!-- ============================================================== -->
                         <!-- End Messages -->
                         <!-- ============================================================== -->
-                        
-                        
                     </ul>
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -283,7 +283,6 @@
                         <!-- ============================================================== -->
                         <!-- End Messages -->
                         <!-- ============================================================== -->
-                        
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
@@ -306,7 +305,7 @@
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                    <li><a href="{{route('auth.logout')}}"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -333,9 +332,9 @@
                 <!-- User profile -->
                 <div class="user-profile" style="background: url({{asset('admin/assets/images/background/user-info.jpg')}} no-repeat;">
                     <!-- User profile image -->
-                    <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}"  alt="user" /> </div>
+                    <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
-                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe</a>
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Trương Lâm</a>
                         <div class="dropdown-menu animated flipInY">
                             <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                             <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
@@ -348,37 +347,37 @@
                 <!-- End User profile text-->
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap">TRANG QUẢN LÝ</li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Trạng thái</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Đơn hàng</a></li>
-                                <li><a href="#">Tin tức</a></li>
-                                <li><a href="#">Yêu cầu</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Tin tức</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Thêm mới</a></li>
-                                <li><a href="#">Quản lý</a></li>
-                                <li><a href="#">Danh mục tin tức</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                            <li><a href="{{route('dress.create')}}">Thêm mới</a></li>
-                                <li><a href="{{route('dress.edit')}}">Quản lý</a></li>
-                                <li><a href="{{route('dress.index')}}">Danh mục sản phẩm</a></li>
-                            </ul>
-                        </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">User</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Thêm mới</a></li>
-                                <li><a href="#">Quản lý</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                        <ul id="sidebarnav">
+                            <li class="nav-small-cap">TRANG QUẢN LÝ</li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Trạng thái</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Đơn hàng</a></li>
+                                    <li><a href="#">Tin tức</a></li>
+                                    <li><a href="#">Yêu cầu</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Tin tức</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Thêm mới</a></li>
+                                    <li><a href="#">Quản lý</a></li>
+                                    <li><a href="#">Danh mục tin tức</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="{{route('admin.create')}}">Thêm mới</a></li>
+                                    <li><a href="{{route('admin.index')}}">Quản lý</a></li>
+                                    <li><a href="{{route('cars.index')}}">Danh mục sản phẩm</a></li>
+                                </ul>
+                            </li>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">User</span></a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="{{route('auth.create')}}">Thêm mới</a></li>
+                                    <li><a href="{{route('auth.index')}}">Quản lý</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
@@ -409,10 +408,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Danh mục sản phẩm</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Thêm sản phẩm</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Danh mục sản phẩm</li>
+                            <li class="breadcrumb-item active">Thêm sản phẩm</li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -449,112 +448,82 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Quản lý sản phẩm</h4>
-                                <h6 class="card-subtitle">Menu quản lý sản phẩm</h6>
-                                <div class="table-responsive m-t-40">
-                                    <table id="myTable" class="table table-bordered table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Tên xe</th>
-                                                <th>Hãng</th>
-                                                <th>Giá</th>
-                                                <th>Màu sắc</th>
-                                                <th>Mô tả ngắn</th>
-                                                <th>Chi tiết sản phẩm</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            
-                                            
-                                            <tr>
-                                                <td>Zenaida Frank</td>
-                                                <td>Software Engineer</td>
-                                                <td>New York</td>
-                                                <td>63</td>
-                                                <td>2010/01/04</td>
-                                                <td>$125,250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Zorita Serrano</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>56</td>
-                                                <td>2012/06/01</td>
-                                                <td>$115,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jennifer Acosta</td>
-                                                <td>Junior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>43</td>
-                                                <td>2013/02/01</td>
-                                                <td>$75,650</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cara Stevens</td>
-                                                <td>Sales Assistant</td>
-                                                <td>New York</td>
-                                                <td>46</td>
-                                                <td>2011/12/06</td>
-                                                <td>$145,600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hermione Butler</td>
-                                                <td>Regional Director</td>
-                                                <td>London</td>
-                                                <td>47</td>
-                                                <td>2011/03/21</td>
-                                                <td>$356,250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lael Greer</td>
-                                                <td>Systems Administrator</td>
-                                                <td>London</td>
-                                                <td>21</td>
-                                                <td>2009/02/27</td>
-                                                <td>$103,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jonas Alexander</td>
-                                                <td>Developer</td>
-                                                <td>San Francisco</td>
-                                                <td>30</td>
-                                                <td>2010/07/14</td>
-                                                <td>$86,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Shad Decker</td>
-                                                <td>Regional Director</td>
-                                                <td>Edinburgh</td>
-                                                <td>51</td>
-                                                <td>2008/11/13</td>
-                                                <td>$183,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Michael Bruce</td>
-                                                <td>Javascript Developer</td>
-                                                <td>Singapore</td>
-                                                <td>29</td>
-                                                <td>2011/06/27</td>
-                                                <td>$183,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Donna Snider</td>
-                                                <td>Customer Support</td>
-                                                <td>New York</td>
-                                                <td>27</td>
-                                                <td>2011/01/25</td>
-                                                <td>$112,000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <h4 class="card-title">sửa thông tin sản phẩm</h4>
+                                <h6 class="card-subtitle">Giao diện trang sửa thông tin sản phẩm</h6>
+                                <form class="form-material m-t-40" action="{{route('admin.update', $dress->id)}}" method="POST" enctype="multipart/form-data">
+                                    <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
+                                    <div class="form-group">
+                                        <label>Tên sản phẩm</label>
+                                        <input type="text" class="form-control form-control-line" name="name" value="{{$dress->name}}">
+                                        <p class="help is-danger">{{ $errors->first('name') }}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Kiểu dáng</label>
+                                        <input type="text" class="form-control form-control-line" name="year" value="{{$car->dress_type_id}}"/>
+                                        <p class="help is-danger">{{ $errors->first('dress_type_id') }}</p>
+                                    </div>
+                                    <!-- {{-- <div class="form-group">
+                                        <label for="brand">Hãng</label>
+                                        <select class="custom-select form-control-line" id="inputGroupSelect01" name="categories">
+                                            <option selected disabled>Choose...</option>
+                                            @foreach($categories as $category)      
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div> --}} -->
+                                    <div class="form-group">
+                                        <label for="brand" >Giá</label>
+                                        <input type="text" class="form-control form-control-line" name="price" placeholder="USD$" value={{$dress->price}}>
+                                        <p class="help is-danger">{{ $errors->first('price') }}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Màu sắc</label>
+                                        <div class="input-group">
+                                            <ul class="icolors">
+                                                <li class="black"></li>
+                                                <li class="red active"></li>
+                                                <li class="green"></li>
+                                                <li class="blue"></li>
+                                                <li class="orange"></li>
+                                                <li class="yellow"></li>
+                                                <li class="purple"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>hình ảnh</label>         
+                                        <input type="file" name="image" class="form-control"> 
+                                        <p class="help is-danger">{{ $errors->first('image') }}</p>
+                                    </div>
+                                    <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Chi tiết sản phẩm</h4>
+                                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
+                                                <div class="form-group">
+                                                <textarea class="textarea_editor form-control" rows="15" placeholder="" name="description" value="">
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>best sale</label>         
+                                        <input type="text" name="best_sale" class="form-control" value="{{$car->best_sale}}"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Deal of Week</label>         
+                                        <input type="text" name="deal_of_week" class="form-control" value="{{$car->deal_of_week}}"> 
+                                    </div>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">update</button>
+                                </form>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
+
+                
+                <!-- End Page Content -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Right sidebar -->
@@ -620,7 +589,9 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2019 by Nhut </footer>
+            <footer class="footer">
+                © 2019 by Lâm đẹp trai
+            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -640,78 +611,35 @@
     <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="{{asset('admin/pro-admin/js/jquery.slimscroll.js')}}"></script>
+    <script src="{{asset('admin/car-admin/js/jquery.slimscroll.js')}}"></script>
     <!--Wave Effects -->
-    <script src="{{asset('admin/pro-admin/js/waves.js')}}"></script>
+    <script src="{{asset('admin/car-admin/js/waves.js')}}"></script>
     <!--Menu sidebar -->
-    <script src="{{asset('admin/pro-admin/js/sidebarmenu.js')}}"></script>
+    <script src="{{asset('admin/car-admin/js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
     <script src="{{asset('admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
     <script src="{{asset('admin/assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
     <!--Custom JavaScript -->
-    <script src="{{asset('admin/pro-admin/js/custom.min.js')}}"></script>
-    <!-- This is data table -->
-    <script src="{{asset('admin/assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-    <!-- start - This is for export functionality only -->
-    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
-    <!-- end - This is for export functionality only -->
-    <script>
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-        $(document).ready(function() {
-            var table = $('#example').DataTable({
-                "columnDefs": [{
-                    "visible": false,
-                    "targets": 2
-                }],
-                "order": [
-                    [2, 'asc']
-                ],
-                "displayLength": 25,
-                "drawCallback": function(settings) {
-                    var api = this.api();
-                    var rows = api.rows({
-                        page: 'current'
-                    }).nodes();
-                    var last = null;
-                    api.column(2, {
-                        page: 'current'
-                    }).data().each(function(group, i) {
-                        if (last !== group) {
-                            $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
-                            last = group;
-                        }
-                    });
-                }
-            });
-            // Order by the grouping
-            $('#example tbody').on('click', 'tr.group', function() {
-                var currentOrder = table.order()[0];
-                if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
-                    table.order([2, 'desc']).draw();
-                } else {
-                    table.order([2, 'asc']).draw();
-                }
-            });
-        });
-    });
-    $('#example23').DataTable({
-        dom: 'Bfrtip',
-        buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    });
-    </script>
+    <script src="{{asset('admin/car-admin/js/custom.min.js')}}"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <script src="{{asset('admin/car-admin/js/jasny-bootstrap.js')}}"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="{{asset('admin/assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
+    <!-- icheck -->
+    <script src="{{asset('admin/assets/plugins/icheck/icheck.min.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/icheck/icheck.init.js')}}"></script>
+    <!-- wysuhtml5 Plugin JavaScript -->
+    <script src="{{asset('admin/assets/plugins/html5-editor/wysihtml5-0.3.0.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.js')}}"></script>
+    <script>
+    $(document).ready(function() {
+        $('.textarea_editor').wysihtml5();
+    });
+    </script>
 </body>
 
 </html>

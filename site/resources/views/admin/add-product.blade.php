@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/assets/images/favicon.png')}}">
     <title>Thêm Sản Phẩm</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/plugins/icheck/skins/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/plugins/html5-editor/bootstrap-wysihtml5.css" />
+    <link href="{{asset('admin/assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('admin/assets/plugins/icheck/skins/all.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.css')}}" />
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('admin/pro-admin/css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="{{asset('admin/pro-admin/css/colors/blue.css')}}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,17 +53,17 @@
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('admin/assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="{{asset('admin/assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span>
                          <!-- dark Logo text -->
-                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="{{asset('admin/assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="{{asset('admin/assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -96,13 +96,13 @@
                                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner" role="listbox">
                                                 <div class="carousel-item active">
-                                                    <div class="container"> <img class="d-block img-fluid" src="../assets/images/big/img1.jpg" alt="First slide"></div>
+                                                    <div class="container"> <img class="d-block img-fluid" src="{{asset('admin/assets/images/big/img1.jpg')}}" alt="First slide"></div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <div class="container"><img class="d-block img-fluid" src="../assets/images/big/img2.jpg" alt="Second slide"></div>
+                                                    <div class="container"><img class="d-block img-fluid" src="{{asset('admin/assets/images/big/img2.jpg')}}" alt="Second slide"></div>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <div class="container"><img class="d-block img-fluid" src="../assets/images/big/img3.jpg" alt="Third slide"></div>
+                                                    <div class="container"><img class="d-block img-fluid" src="{{asset('admin/assets/images/big/img3.jpg')}}" alt="Third slide"></div>
                                                 </div>
                                             </div>
                                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
@@ -250,25 +250,25 @@
                                         <div class="message-center">
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('admin/assets/images/users/2.jpg')}}" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../assets/images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
-                                                <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="user-img"> <img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                                 <div class="mail-contnet">
                                                     <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
                                             </a>
@@ -287,12 +287,12 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('/assets/images/users/1.jpg')}}" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-img"><img src="{{asset('/assets/images/users/1.jpg')}}" alt="user"></div>
                                             <div class="u-text">
                                                 <h4>Steave Jobs</h4>
                                                 <p class="text-muted">varun@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
@@ -330,9 +330,9 @@
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- User profile -->
-                <div class="user-profile" style="background: url(../assets/images/background/user-info.jpg) no-repeat;">
+                <div class="user-profile" style="background: url({{asset('admin/assets/images/background/user-info.jpg')}} no-repeat;">
                     <!-- User profile image -->
-                    <div class="profile-img"> <img src="../assets/images/users/profile.png" alt="user" /> </div>
+                    <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
                     <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Trương Lâm</a>
                         <div class="dropdown-menu animated flipInY">
@@ -356,18 +356,18 @@
                                 <li><a href="#">Yêu cầu</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Tin tức</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Album</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="#">Thêm mới</a></li>
                                 <li><a href="#">Quản lý</a></li>
-                                <li><a href="#">Danh mục tin tức</a></li>
+                                <li><a href="#">Danh mục album</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Ao cuoi</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="add-product.html">Thêm mới</a></li>
-                                <li><a href="list-product.html">Quản lý</a></li>
-                                <li><a href="cat-product.html">Danh mục sản phẩm</a></li>
+                            <li><a href="{{route('dress.create')}}">Thêm mới</a></li>
+                                <li><a href="{{route('dress.index')}}">Quản lý</a></li>
+                                <li><a href="{{route('dress.index')}}">Danh mục ao cuoi</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">User</span></a>
@@ -450,64 +450,56 @@
                             <div class="card-body">
                                 <h4 class="card-title">Thêm sản phẩm</h4>
                                 <h6 class="card-subtitle">Giao diện trang thêm mới sản phẩm</h6>
-                                <form class="form-material m-t-40">
+                                <form class="form-material m-t-40" action="{{route('dress.store')}}" method="post" enctype="multipart/form-data">
+                                    <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
                                     <div class="form-group">
-                                        <label>Tên sản phẩm</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: C250..."> </div>
+                                        <label>Tên váy</label>
+                                        <input type="text" class="form-control form-control-line" name="name">
+                                        <p class="text-danger">{{ $errors->first('name') }}</p>
+                                    </div>
                                     <div class="form-group">
-                                        <label for="brand">Hãng</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: Mercedes..."> </div>
+                                        <label>Kiểu váy</label>
+                                        <input type="text" class="form-control form-control-line" name="year">
+                                        <p class="text-danger">{{ $errors->first('dress_type_id') }}</p>
+                                    </div>
                                     <div class="form-group">
-                                        <label for="brand">Giá</label>
-                                        <input type="text" class="form-control form-control-line" value="Vd: 1.750.000.000 đ"> </div>
+                                        <label for="brand" >Giá</label>
+                                        <input type="text" class="form-control form-control-line" name="price" placeholder="USD$">
+                                        <p class="text-danger">{{ $errors->first('price') }}</p>
+                                    </div>
+                                   
                                     <div class="form-group">
-                                        <label>Màu sắc</label>
-                                        <div class="input-group">
-                                            <ul class="icolors">
-                                                <li class="black"></li>
-                                                <li class="red active"></li>
-                                                <li class="green"></li>
-                                                <li class="blue"></li>
-                                                <li class="orange"></li>
-                                                <li class="yellow"></li>
-                                                <li class="purple"></li>
-                                            </ul>
+                                        <label>màu sắc</label>
+                                        <input type="text" class="form-control form-control-line" name="color">
+                                        <p class="text-danger">{{ $errors->first('color') }}</p>
+                                    </div>
+                                 
+                                    <div class="form-group">
+                                        <label>hình ảnh</label>         
+                                        <input type="file" name="image" class="form-control"> 
+                                        <p class="text-danger">{{ $errors->first('image') }}</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>thêm ảnh chi tiết cho sản phẩm</label>                <input id="" class="form-control" type="file" name='images_list[]' multiple="multiple">                  
+                                        <p class="text-danger">{{ $errors->first('images_list') }}</p>
+                                    </div>
+                                    <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">Chi tiết sản phẩm</h4>
+                                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
+                                                <div class="form-group">
+                                                <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..." name="description">
+                                                </textarea>
+                                            </div>
+                                            <p class="text-danger">{{ $errors->first('description') }}</p>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Mô tả ngắn</label>
-                                        <textarea class="form-control" rows="5"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Hình đại diện</label>
-                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                            <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
-                                            <input type="hidden">
-                                            <input type="file" name="..."> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
-                                    </div>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Đăng sản phẩm</button>
                                 </form>
                             </div>
                         </div>
                         
                     </div>
-                </div>
-
-                <!-- .row -->
-                <div class="row">
-                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Chi tiết sản phẩm</h4>
-                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
-                                <form method="post">
-                                    <div class="form-group">
-                                        <textarea class="textarea_editor form-control" rows="15" placeholder="Enter text ..."></textarea>
-                                    </div>
-                                </form>
-                                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Đăng sản phẩm</button>
-                            </div>
-                        </div>
-                    </div>      
                 </div>
                 <!-- /.row -->
 
@@ -541,28 +533,28 @@
                             <ul class="m-t-20 chatonline">
                                 <li><b>Chat option</b></li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/1.jpg')}}" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/2.jpg')}}" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/3.jpg')}}" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/4.jpg')}}" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/5.jpg')}}" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/6.jpg')}}" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/7.jpg')}}" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                    <a href="javascript:void(0)"><img src="{{asset('admin/assets/images/users/8.jpg')}}" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
                                 </li>
                             </ul>
                         </div>
@@ -595,35 +587,35 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="{{asset('admin/assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="{{asset('admin/pro-admin/js/jquery.slimscroll.js')}}"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="{{asset('admin/pro-admin/js/waves.js')}}"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="{{asset('admin/pro-admin/js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
-    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{asset('admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
     <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="{{asset('admin/pro-admin/js/custom.min.js')}}"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
-    <script src="js/jasny-bootstrap.js"></script>
+    <script src="{{asset('admin/pro-admin/js/jasny-bootstrap.js')}}"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="{{asset('admin/assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
     <!-- icheck -->
-    <script src="../assets/plugins/icheck/icheck.min.js"></script>
-    <script src="../assets/plugins/icheck/icheck.init.js"></script>
+    <script src="{{asset('admin/assets/plugins/icheck/icheck.min.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/icheck/icheck.init.js')}}"></script>
     <!-- wysuhtml5 Plugin JavaScript -->
-    <script src="../assets/plugins/html5-editor/wysihtml5-0.3.0.js"></script>
-    <script src="../assets/plugins/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script src="{{asset('admin/assets/plugins/html5-editor/wysihtml5-0.3.0.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.js"></script>
     <script>
     $(document).ready(function() {
 

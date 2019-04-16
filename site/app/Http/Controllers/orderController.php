@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\category_services;
 use Illuminate\Http\Request;
 
-class CategoryServicesController extends Controller
+class orderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +13,19 @@ class CategoryServicesController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        //
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('categories.create');
+        //
+        $car = car::find($id);
+        return view('order.create' , ['car' => $car]);
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,53 +35,54 @@ class CategoryServicesController extends Controller
     public function store(Request $request)
     {
         //
-        $categories = new category;
-        $categories->name = $request->name;
-        $categories->save();
-        return redirect()->route('category.create');
+        $orders = new oder;
+        $orders->customer_name = $request->customer_name;
+        $orders->email = $request->email;
+        $orders->address = $request->address;
+        $orders->phone = $request->phone;
+        // $request->car_id->implode('-');
+        // dd($request->car_id);
+        $orders->car_id = $request->car_id;
+        $orders->save();     
     }
-
     /**
      * Display the specified resource.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(category_services $category_services)
+    public function show($id)
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(category_services $category_services)
+    public function edit($id)
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, category_services $category_services)
+    public function update(Request $request, $id)
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(category_services $category_services)
+    public function destroy($id)
     {
         //
     }
