@@ -15,8 +15,5 @@ class category_services extends Model
     {
         return $this->hasOne('App\photography_services');
     }
-    public function weddding()
-    {
-        return $this->hasOne('App\wedding_services');
-    }
+   
 }

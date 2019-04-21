@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class oder extends Model
 {
-    protected $filable = ['customer_name', 'email', 'address', 'phone', 'dresses_id'];
+    protected $filable = ['customer_name', 'email', 'address', 'phone', 'message'];
     protected $table = 'oders';
-    public function cars()
-    {
-        return $this -> belongsTo('App\cars', 'car_id', 'id');
-    }
+    
 }

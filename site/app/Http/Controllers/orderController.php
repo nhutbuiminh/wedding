@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\oders;
 use Illuminate\Http\Request;
+use App\oder;
 
 class orderController extends Controller
 {
@@ -23,8 +24,8 @@ class orderController extends Controller
     public function create($id)
     {
         //
-        $car = car::find($id);
-        return view('order.create' , ['car' => $car]);
+        // $car = car::find($id);
+        // return view('order.create' , ['car' => $car]);
     }
     /**
      * Store a newly created resource in storage.
@@ -40,10 +41,12 @@ class orderController extends Controller
         $orders->email = $request->email;
         $orders->address = $request->address;
         $orders->phone = $request->phone;
+        $orders->message = $request->message;
         // $request->car_id->implode('-');
         // dd($request->car_id);
-        $orders->car_id = $request->car_id;
-        $orders->save();     
+        //$orders->car_id = $request->car_id;
+        $orders->save(); 
+        return view('index');    
     }
     /**
      * Display the specified resource.

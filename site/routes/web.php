@@ -12,24 +12,23 @@ use App\Http\Middleware\CheckUser;
 */
 
 Route::get('/', function () {
-    return view('index')->name('index');
+    return view('index');
 })->name('home');
 Route::get('/left', function(){
-    return view('left-sidebar');
+    return view('dresses');
 })->name('leftSlidebar');
 Route::get('/right', function(){
-    return view('right-sidebar');
+    return view('photography');
 })->name('rightSlidebar');
 Route::get('/no', function(){
-    return view('no-sidebar');
+    return view('weddingServices');
 })->name('noSlidebar');
 //categories
 Route::get('categories/create', 'categoriesController@create')->name('category.create');
 Route::post('categories/store', 'categoriesController@store')->name('category.store');
 Auth::routes();
 //auth
- Users
-
+ 
 Route::resource('auth','authController');
 // Route::get('/admin/register', 'HomeController@index')->name('home');
 
@@ -60,6 +59,6 @@ Route::post('admin/store', 'DressesController@store')->name('dress.store');
 Route::post('admin/update/{id}', 'DressesController@update')->name('dress.update');
 Route::delete('admin/delete/{id}', 'DressesController@destroy')->name('dress.destroy');
 //order
-Route::get('/order/{id}', 'orderController@create')->name('order.create');
+//Route::get('/order/{id}', 'orderController@create')->name('order.create');
 Route::post('/order/store/', 'orderController@store')->name('order.store');
 

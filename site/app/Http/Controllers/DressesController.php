@@ -1,11 +1,13 @@
 <?php
 namespace App\Http\Controllers;
+use App\Http\Controllers\ImagesDress;
 use App\category_services;
 use Illuminate\Http\Request;
 use App\dresses;
 use Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use App\image_dresses;
+
 class DressesController extends Controller
 {
     /**
@@ -40,9 +42,9 @@ class DressesController extends Controller
     {
         
         //store
-        $dresses = new Dresses;
+        $dresses = new dresses;
         $dresses->name = $request->name;
-        $dresses->dress_type_id = $request->dress_type_id;
+        $dresses->dress_type = $request->dress_type;
         $dresses->price = $request->price;
         $dresses->color = $request->color;
         //upload image to database
@@ -64,7 +66,7 @@ class DressesController extends Controller
                 $images[] = $name;
             }
         }
-        $images_dresses = new images_product;
+        $images_dresses = new ImagesDress;
         $images_dresses->photo = json_encode($images);
         $images_dresses->dresses_id = $dresses->id;
         $images_dresses->save();

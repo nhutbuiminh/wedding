@@ -57,7 +57,7 @@ class authController extends Controller
         $user->password = Hash::make($request->password) ;
         $user->save();
         $users = User::get();
-        return redirect()->route('auth.index');
+        return redirect()->route('admin.index');
     }
 
     /**

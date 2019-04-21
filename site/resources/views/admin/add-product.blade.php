@@ -459,8 +459,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Kiểu váy</label>
-                                        <input type="text" class="form-control form-control-line" name="year">
-                                        <p class="text-danger">{{ $errors->first('dress_type_id') }}</p>
+                                        <input type="text" class="form-control form-control-line" name="dress_type">
+                                        <p class="text-danger">{{ $errors->first('dress_type') }}</p>
                                     </div>
                                     <div class="form-group">
                                         <label for="brand" >Giá</label>
@@ -615,7 +615,7 @@
     <script src="{{asset('admin/assets/plugins/icheck/icheck.init.js')}}"></script>
     <!-- wysuhtml5 Plugin JavaScript -->
     <script src="{{asset('admin/assets/plugins/html5-editor/wysihtml5-0.3.0.js')}}"></script>
-    <script src="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.js"></script>
+    <script src="{{asset('admin/assets/plugins/html5-editor/bootstrap-wysihtml5.js')}}"></script>
     <script>
     $(document).ready(function() {
 

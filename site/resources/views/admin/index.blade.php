@@ -271,7 +271,7 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('dress.create')}}">Thêm mới</a></li>
-                                <li><a href="{{route('dress.edit',$dress->id)}}">Quản lý</a></li>
+                                <li><a href="{{route('dress.index')}}">Quản lý</a></li>
                                 <li><a href="{{route('dress.index')}}">Danh mục sản phẩm</a></li>
                             </ul>
                         </li>
@@ -823,7 +823,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer"> © 2019 by Lâm đẹp trai </footer>
+            <footer class="footer"> © 2019 by Nhut - Linh </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -839,9 +839,11 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="{{asset('admin/assets/plugins/jquery/jquery.min.js')}}"></script>
+    <!-- <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+   
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
-    <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!-- <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script> -->
+    -->
     
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{asset('admin/pro-admin/js/jquery.slimscroll.js')}}"></script>

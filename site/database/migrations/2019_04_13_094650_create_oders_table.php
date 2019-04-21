@@ -18,7 +18,8 @@ class CreateOdersTable extends Migration
             $table->string('customer_name');
             $table->string('email');
             $table->string('address');
-            $table->integer('phone');
+            $table->string('phone');
+            $table->longText('message');
             // $table->integer('car_id')->unsigned();
             // $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->timestamps();

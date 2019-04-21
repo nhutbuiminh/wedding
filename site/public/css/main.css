@@ -2046,12 +2046,12 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("./images/leah-mickael-blue-wedding-france-102803885-bride-groom-kiss_horiz.jpg") center center;
+		background: url("./images/bin-thi-u-300052-unsplash.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
 
-		#header:before {
+		/* #header:before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -2060,8 +2060,8 @@ input, select, textarea {
 			height: 100%;
 			background-size: cover;
 			background-position: center;
-			background: url("./images/andreas-ronningen-29698-unsplash.jpg");
-		}
+			background: url("./images/img1.jpg");
+		} */
 
 		.homepage #header {
 			height: 35em;
