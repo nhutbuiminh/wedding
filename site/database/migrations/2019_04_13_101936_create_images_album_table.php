@@ -15,9 +15,9 @@ class CreateImagesAlbumTable extends Migration
     {
         Schema::create('images_album', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('image');
-            $table->integer('photography_services_id');
+            $table->longText('image');
+            $table->integer('photography_services_id')->unsigned();
+            $table->foreign('photography_services_id')->references('id')->on('photography_services');
             $table->timestamps();
         });
     }

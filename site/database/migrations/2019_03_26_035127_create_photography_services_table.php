@@ -16,8 +16,11 @@ class CreatePhotographyServicesTable extends Migration
         Schema::create('photography_services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('detail');
-            $table->integer('category_id');
+             $table->integer('category_services_id');
+            $table->longText('image')->nullable();
+            $table->longText('description')->nullable();
+            $table->double('price')->nullable();
+            
             $table->timestamps();
         });
     }

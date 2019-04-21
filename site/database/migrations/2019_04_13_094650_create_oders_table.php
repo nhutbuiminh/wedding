@@ -20,8 +20,7 @@ class CreateOdersTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->longText('message');
-            // $table->integer('car_id')->unsigned();
-            // $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }

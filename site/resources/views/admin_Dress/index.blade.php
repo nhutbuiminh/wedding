@@ -243,7 +243,7 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
-                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Trương Lâm</a>
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Nhut Bui</a>
                         <div class="dropdown-menu animated flipInY"> <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a> <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a> <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
                             <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
                             <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a> </div>
@@ -261,11 +261,11 @@
                                 <li><a href="#">Yêu cầu</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Tin tức</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Thêm mới</a></li>
-                                <li><a href="#">Quản lý</a></li>
-                                <li><a href="#">Danh mục tin tức</a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Album</span></a>
+                        <ul aria-expanded="false" class="collapse">
+                                <li><a href="{{route('album.create')}}">Thêm mới</a></li>
+                                <li><a href="{{route('album.edit')}}">Quản lý</a></li>
+                                <li><a href="{{route('album.index')}}">Danh mục tin tức</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
@@ -839,11 +839,11 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     <script src="{{asset('admin/assets/plugins/jquery/jquery.min.js')}}"></script>
-    <!-- <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
    
     <!-- Bootstrap tether Core JavaScript -->
-    <!-- <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script> -->
-    -->
+    <script src="{{asset('admin/assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+   
     
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{asset('admin/pro-admin/js/jquery.slimscroll.js')}}"></script>

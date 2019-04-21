@@ -46,7 +46,15 @@ Route::delete('auth/delete/{id}', 'authController@destroy')->name('auth.destroy'
 
  
 
-
+//album-admin
+Route::get('admin/album/index', 'PhotographyServicesController@index')->name('album.index');//->middleware('checkUser');
+Route::get('admin/album/createAlbum', 'PhotographyServicesController@create')->name('album.create');//->middleware('checkUser');
+Route::get('admin/album/show/{id}', 'PhotographyServicesController@show')->name('album.show')->middleware('checkUser');
+Route::get('admin/album/home', 'PhotographyServicesController@home')->name('album.home')->middleware('checkUser');
+Route::get('admin/album/edit/{id}', 'PhotographyServicesController@edit')->name('album.edit')->middleware('checkUser');
+Route::post('admin/album/store', 'PhotographyServicesController@store')->name('album.store');
+Route::post('admin/album/update/{id}', 'PhotographyServicesController@update')->name('album.update');
+Route::delete('admin/album/delete/{id}', 'PhotographyServicesController@destroy')->name('album.destroy');
 
 
 //dress-admin

@@ -1,12 +1,12 @@
 <?php
 namespace App\Http\Controllers;
-use App\Http\Controllers\ImagesDress;
+use App\Http\Controllers\ImagesDressController;
 use App\category_services;
 use Illuminate\Http\Request;
 use App\dresses;
 use Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use App\image_dresses;
+use App\image_dress;
 
 class DressesController extends Controller
 {
@@ -19,7 +19,7 @@ class DressesController extends Controller
     {
         //
         $dresses = Dresses::paginate(20);
-        return view('admin.index', ['dress'=> $dresses]);
+        return view('admin_Dress.index', ['dress'=> $dresses]);
     }
     /**
      * Show the form for creating a new resource.
@@ -30,7 +30,7 @@ class DressesController extends Controller
     {
         //
         //$categories = Category::all();
-    return view('admin.add-product'/*, ['categories' => $categories]*/);
+    return view('admin_Dress.add-product'/*, ['categories' => $categories]*/);
     }
     /**
      * Store a newly created resource in storage.
@@ -67,7 +67,7 @@ class DressesController extends Controller
             }
         }
         $images_dresses = new ImagesDress;
-        $images_dresses->photo = json_encode($images);
+        $images_dresses->image = json_encode($images);
         $images_dresses->dresses_id = $dresses->id;
         $images_dresses->save();
         return redirect()->route('admin.index');
@@ -81,8 +81,8 @@ class DressesController extends Controller
     public function show($id)
     {
         //
-        $car =car::find($id);
-        return view('admin.show', ['car' =>$car]);
+        $dress =dresses::find($id);
+        return view('admin_Dress.show', ['dress' =>$dress]);
     }
     /**
      * Show the form for editing the specified resource.
@@ -95,7 +95,7 @@ class DressesController extends Controller
         //
         $dress = dresses::find($id);
         
-    return view('admin.edit', compact(dress));
+    return view('admin_Dress.edit', compact(dress));
     }
     /**
      * Update the specified resource in storage.
@@ -108,26 +108,19 @@ class DressesController extends Controller
     {
         //
         
-        $car = car::find($id);
-        $car->name = $request->name;
-        $car->year = $request->year;
-        $car->body_style = $request->body_style;
-        $car->engine = $request->engine;
-        $car->price = $request->price;
-        $car->transmission = $request->transmission;
-        $car->color = $request->color;
-        $car->fuel_style = $request->fuel_style; 
-        $car->category_id = $request->categories;
+        $dresses = new dresses;
+        $dresses->name = $request->name;
+        $dresses->dress_type = $request->dress_type;
+        $dresses->price = $request->price;
+        $dresses->color = $request->color;
         //upload image to database
         $filename = $request->file('image')->getClientOriginalName();
         $path = public_path('img');
         $request->file('image')->move($path, $filename);
-        $car->image = $filename;
-        $car->description = $request->description;
-        $car->best_sale = $request->best_sale;
-        $car->deal_of_week = $request->deal_of_week;
-        $car->save();
-        return redirect()->route('admin.index');
+        $dresses->image = $filename;
+        $dresses->description = $request->description;
+        $dresses->save();
+        return redirect()->route('admin_Dress.index');
     }
     /**
      * Remove the specified resource from storage.
@@ -138,9 +131,9 @@ class DressesController extends Controller
     public function destroy($id)
     {
         //
-        $car = car::find($id);
-        $car->delete();
-        return redirect()->route('admin.index');
+        $dress = dresses::find($id);
+        $dress->delete();
+        return redirect()->route('admin_Dress.index');
     }
     public function home()
     {
