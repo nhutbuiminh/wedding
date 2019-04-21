@@ -472,12 +472,12 @@
                                         </thead>
                                         <tbody>           
                                             <tr>
-                                                <td>{{$user->id}}</td>
-                                                <td>{{$user->name}}</td>
-                                                <td>{{$user->password}}</td>
-                                                <td>{{$user->email}}</td>
-                                                <td>{{$user->created_at}}</td>
-                                                <td>{{$user->updated_at}}</td>
+                                                <td>{{$users->id}}</td>
+                                                <td>{{$users->name}}</td>
+                                                <td>{{$users->password}}</td>
+                                                <td>{{$users->email}}</td>
+                                                <td>{{$users->created_at}}</td>
+                                                <td>{{$users->updated_at}}</td>
                                                 <td class="d-flex">
                                                     <form action="{{route('auth.edit', $user->id)}}" class="mr-2" method="GET">
                                                         <button class="btn btn-warning">edit</button>

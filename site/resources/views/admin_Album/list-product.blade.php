@@ -449,40 +449,32 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Quản lý sản phẩm</h4>
-                                <h6 class="card-subtitle">Menu quản lý sản phẩm</h6>
+                                <h4 class="card-title">Quản lý album</h4>
+                                <h6 class="card-subtitle">Menu quản lý album</h6>
                                 <div class="table-responsive m-t-40">
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th class="text-center">id</th>
                                                 <th>hình ảnh</th>
-                                                <th class="text-center">Tên váy</th>
-                                                <th class="text-center">Hãng</th>
-                                                
+                                                <th class="text-center">Tên album</th>
                                                 <th class="text-center">Giá</th>
-                                                <th class="text-center">Màu sắc</th>
-                                                <th class="text-center">loại váy</th>
-                                
-                                                <th class="text-center">Chi tiết sản phẩm</th>
-                                                
+                                                <th class="text-center">Chi tiết album</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($dress as $Dresses)            
+                                            @foreach($album as $album)            
                                             <tr>
-                                                <td>{{$dress->id}}</td>
-                                                <td><img src="{{asset('img/'.$dress->image)}}" alt="" style="heigh:100px; width:100px;"></td>
-                                                <td>{{$dress->name}}</td>
-                                                <td>{{$dress->dress_type_id}}</td>
-                                                <td>{{$dress->color}}</td>
-                                                <td>{{$dress->price}}</td>
-                                                <td>{!!$car->description!!}</td>
+                                                <td>{{$album->id}}</td>
+                                                <td><img src="{{asset('img/'.$album->image)}}" alt="" style="heigh:100px; width:100px;"></td>
+                                                <td>{{$album->name}}</td>
+                                                <td>{{$album->price}}</td>
+                                                <td>{!!$album->description!!}</td>
                                                     <td class="d-flex">
-                                                    <form action="{{route('dress.show', $dress->id)}}" class="mr-2" method="GET">
+                                                    <form action="{{route('album.show', $album->id)}}" class="mr-2" method="GET">
                                                         <button class="btn btn-warning" type="submit">show</button>
                                                     </form>
-                                                    <form action="{{route('dress.destroy', $dress->id)}}" method="post">
+                                                    <form action="{{route('album.destroy', $album->id)}}" method="post">
                                                         <input type="hidden" name="_method" value="delete" /> {{csrf_field()}}
                                                         <button class="btn btn-danger" type="submit">delete</button>
                                                     </form>
@@ -491,7 +483,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    <form action="{{route('dress.create')}}" method="get">
+                                    <form action="{{route('album.create')}}" method="get">
                                         <button class="btn btn-primary">create</button>
                                     </form>
                                 </div>

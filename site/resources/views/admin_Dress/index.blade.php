@@ -264,7 +264,7 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Album</span></a>
                         <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('album.create')}}">Thêm mới</a></li>
-                                <li><a href="{{route('album.edit')}}">Quản lý</a></li>
+                                <li><a href="{{route('album.index')}}">Quản lý</a></li>
                                 <li><a href="{{route('album.index')}}">Danh mục tin tức</a></li>
                             </ul>
                         </li>

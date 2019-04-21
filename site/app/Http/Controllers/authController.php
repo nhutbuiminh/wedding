@@ -15,10 +15,10 @@ class authController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function login(){
-        return view('adminUsers.login');
+    // public function login(){
+    //     return view('auth.login');
 
-    }
+    // }
     public function index()
     {
         //
@@ -26,21 +26,21 @@ class authController extends Controller
         return view('adminUsers.list-users',  ['users' => $users]);
         // return view('adminUsers.list-users'); 
     }
-    public function logout()
-    {
-        Auth::logout();
-        return redirect()->route('auth.login');
-    }
+    // public function logout()
+    // {
+    //     Auth::logout();
+    //     return redirect()->route('auth.login');
+    // }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('auth.register');
-    }
+    // public function create()
+    // {
+    //     return view('auth.register');
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -57,7 +57,7 @@ class authController extends Controller
         $user->password = Hash::make($request->password) ;
         $user->save();
         $users = User::get();
-        return redirect()->route('admin.index');
+        return redirect()->route('dress.index');
     }
 
     /**
@@ -68,8 +68,9 @@ class authController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-        return view('adminUsers.show', ['user' => $user]);
+        return view('admin_Dress.index');
+        // $user = User::find($id);
+        // return view('adminUsers.show', ['users' => $user]);
     }
 
     /**

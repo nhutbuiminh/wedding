@@ -356,12 +356,12 @@
                                     <li><a href="#">Yêu cầu</a></li>
                                 </ul>
                             </li>
-                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Tin tức</span></a>
-                                <ul aria-expanded="false" class="collapse">
-                                    <li><a href="#">Thêm mới</a></li>
-                                    <li><a href="#">Quản lý</a></li>
-                                    <li><a href="#">Danh mục tin tức</a></li>
-                                </ul>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-laptop-windows"></i><span class="hide-menu">Album</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="{{route('album.create')}}">Thêm mới</a></li>
+                                <li><a href="{{route('album.index')}}" method="get">Quản lý</a></li>
+                                <li><a href="{{route('album.index')}}">Danh mục tin tức</a></li>
+                            </ul>
                             </li>
                             <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>
                                 <ul aria-expanded="false" class="collapse">
@@ -448,20 +448,17 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">sửa thông tin sản phẩm</h4>
+                                <h4 class="card-title">sửa thông tin album</h4>
                                 <h6 class="card-subtitle">Giao diện trang sửa thông tin sản phẩm</h6>
-                                <form class="form-material m-t-40" action="{{route('admin.update', $dress->id)}}" method="POST" enctype="multipart/form-data">
+                                <form class="form-material m-t-40" action="{{route('alum.update', $album->id)}}" method="POST" enctype="multipart/form-data">
                                     <input type="hidden" name="_method" value="post" /> {{csrf_field()}}
                                     <div class="form-group">
-                                        <label>Tên sản phẩm</label>
-                                        <input type="text" class="form-control form-control-line" name="name" value="{{$dress->name}}">
+                                        <label>Tên album/label>
+                                        <input type="text" class="form-control form-control-line" name="name" value="{{$album->name}}">
                                         <p class="help is-danger">{{ $errors->first('name') }}</p>
                                     </div>
                                     <div class="form-group">
-                                        <label>Kiểu dáng</label>
-                                        <input type="text" class="form-control form-control-line" name="year" value="{{$car->dress_type_id}}"/>
-                                        <p class="help is-danger">{{ $errors->first('dress_type_id') }}</p>
-                                    </div>
+                                        
                                     <!-- {{-- <div class="form-group">
                                         <label for="brand">Hãng</label>
                                         <select class="custom-select form-control-line" id="inputGroupSelect01" name="categories">
@@ -476,19 +473,7 @@
                                         <input type="text" class="form-control form-control-line" name="price" placeholder="USD$" value={{$dress->price}}>
                                         <p class="help is-danger">{{ $errors->first('price') }}</p>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Màu sắc</label>
-                                        <div class="input-group">
-                                            <ul class="icolors">
-                                                <li class="black"></li>
-                                                <li class="red active"></li>
-                                                <li class="green"></li>
-                                                <li class="blue"></li>
-                                                <li class="orange"></li>
-                                                <li class="yellow"></li>
-                                                <li class="purple"></li>
-                                            </ul>
-                                        </div>
+                                    
                                     </div>
                                     
                                     <div class="form-group">
@@ -498,22 +483,15 @@
                                     </div>
                                     <div class="card">
                                             <div class="card-body">
-                                                <h4 class="card-title">Chi tiết sản phẩm</h4>
-                                                <h6 class="card-subtitle">Mô tả chi tiết cho sản phẩm...</h6>
+                                                <h4 class="card-title">Chi tiết album</h4>
+                                                <h6 class="card-subtitle">Mô tả chi tiết cho album...</h6>
                                                 <div class="form-group">
                                                 <textarea class="textarea_editor form-control" rows="15" placeholder="" name="description" value="">
                                                 </textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>best sale</label>         
-                                        <input type="text" name="best_sale" class="form-control" value="{{$car->best_sale}}"> 
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Deal of Week</label>         
-                                        <input type="text" name="deal_of_week" class="form-control" value="{{$car->deal_of_week}}"> 
-                                    </div>
+                                    
                                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">update</button>
                                 </form>
                             </div>

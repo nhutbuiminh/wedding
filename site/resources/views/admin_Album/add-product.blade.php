@@ -462,8 +462,16 @@
                                         <input type="text" class="form-control form-control-line" name="price" placeholder="USD$">
                                         <p class="text-danger">{{ $errors->first('price') }}</p>
                                     </div>
-                                   
-                                    
+                                    <div class="form-group">
+                                        <label for="brand">Danh mục</label>
+                                        <select class="custom-select form-control-line" id="inputGroupSelect01" name="categories">
+                                            <option selected disabled>Choose...</option>
+                                            @foreach($categories as $category_services)      
+                                            <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
+                                        </select>
+                                        <p class="text-danger">{{ $errors->first('categories') }}</p>
+                                    </div>
                                  
                                     <div class="form-group">
                                         <label>hình ảnh</label>         

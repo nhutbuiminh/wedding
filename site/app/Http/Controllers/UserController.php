@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
-
-use App\category_services;
 use Illuminate\Http\Request;
 
-class CategoryServicesController extends Controller
+class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,7 @@ class CategoryServicesController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('home');
     }
 
     /**
@@ -25,7 +28,7 @@ class CategoryServicesController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        //
     }
 
     /**
@@ -37,19 +40,15 @@ class CategoryServicesController extends Controller
     public function store(Request $request)
     {
         //
-        $categories = new category_services;
-        $categories->name = $request->name;
-        $categories->save();
-        return redirect()->route('category.create');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(category_services $category_services)
+    public function show($id)
     {
         //
     }
@@ -57,10 +56,10 @@ class CategoryServicesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(category_services $category_services)
+    public function edit($id)
     {
         //
     }
@@ -69,10 +68,10 @@ class CategoryServicesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, category_services $category_services)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +79,10 @@ class CategoryServicesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\category_services  $category_services
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(category_services $category_services)
+    public function destroy($id)
     {
         //
     }

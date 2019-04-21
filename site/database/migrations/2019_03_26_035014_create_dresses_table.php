@@ -21,7 +21,8 @@ class CreateDressesTable extends Migration
             $table->longText('image')->nullable();
             $table->longText('description')->nullable();
             $table->double('price')->nullable();
-             $table->integer('category_services_id');
+             $table->integer('category_services_id')->unsigned();
+             $table->foreign('category_services_id')->references('id')->on('category_services');
             
             $table->timestamps();
         });

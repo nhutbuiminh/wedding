@@ -71,7 +71,7 @@ class PhotographyServicesController extends Controller
      * @param  \App\photography_services  $photography_services
      * @return \Illuminate\Http\Response
      */
-    public function show(photography_services $photography_services)
+    public function show($id)
     {
         $album =photography_services::find($id);
         return view('admin_Album.show', ['album' =>$album]);
@@ -83,11 +83,11 @@ class PhotographyServicesController extends Controller
      * @param  \App\photography_services  $photography_services
      * @return \Illuminate\Http\Response
      */
-    public function edit(photography_services $photography_services)
+    public function edit($id)
     {
         $album = photography_services::find($id);
         
-    return view('admin_Album.edit', compact(album));
+    return view('admin_Album.edit', ['album' =>$album]);
     }
 
     /**
@@ -97,7 +97,7 @@ class PhotographyServicesController extends Controller
      * @param  \App\photography_services  $photography_services
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, photography_services $photography_services)
+    public function update(Request $request)
     {
         $album = new photography_services;
         $album->name = $request->name;
@@ -118,7 +118,7 @@ class PhotographyServicesController extends Controller
      * @param  \App\photography_services  $photography_services
      * @return \Illuminate\Http\Response
      */
-    public function destroy(photography_services $photography_services)
+    public function destroy($id)
     {
         $album = photography_services::find($id);
         $album->delete();
