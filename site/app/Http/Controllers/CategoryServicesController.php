@@ -60,9 +60,10 @@ class CategoryServicesController extends Controller
      * @param  \App\category_services  $category_services
      * @return \Illuminate\Http\Response
      */
-    public function edit(category_services $category_services)
+    public function edit($id)
     {
-        //
+        $category = category::find($id);
+        return view('categories.edit', ['category' => $category]);
     }
 
     /**

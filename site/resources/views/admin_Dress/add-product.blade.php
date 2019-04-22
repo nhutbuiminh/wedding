@@ -334,7 +334,7 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="{{asset('admin/assets/images/users/profile.png')}}" alt="user" /> </div>
                     <!-- User profile text-->
-                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Trương Lâm</a>
+                    <div class="profile-text"> <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Nhut Bui</a>
                         <div class="dropdown-menu animated flipInY">
                             <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
                             <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
@@ -468,15 +468,11 @@
                                         <p class="text-danger">{{ $errors->first('price') }}</p>
                                     </div>
                                     <div class="form-group">
-                                        <label for="brand">Danh mục</label>
-                                        <select class="custom-select form-control-line" id="inputGroupSelect01" name="categories">
-                                            <option selected disabled>Choose...</option>
-                                            @foreach($categories as $categories)      
-                                            <option value="{{$category->id}}">{{$category->name}}</option>
-                                            @endforeach
-                                        </select>
-                                        <p class="text-danger">{{ $errors->first('categories') }}</p>
+                                        <label for="brand" >Category</label>
+                                        <input type="text" class="form-control form-control-line" name="categories">
+                                        <p class="text-danger">{{ $errors->first('category_services_id') }}</p>
                                     </div>
+                                    
                                     <div class="form-group">
                                         <label>màu sắc</label>
                                         <input type="text" class="form-control form-control-line" name="color">

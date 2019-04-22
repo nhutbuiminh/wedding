@@ -47,6 +47,7 @@ class DressesController extends Controller
         $dresses->dress_type = $request->dress_type;
         $dresses->price = $request->price;
         $dresses->color = $request->color;
+        $dresses->category_services_id = $request->categories;
         //upload image to database
         $filename = $request->file('image')->getClientOriginalName();
         $path = public_path('img');
