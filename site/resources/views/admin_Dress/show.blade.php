@@ -481,25 +481,20 @@
                                         </thead>
                                         <tbody>           
                                             <tr>
-                                                <td>{{$car->id}}</td>
-                                                <td><img src="{{asset('img/'.$car->image)}}" alt="" style="heigh:100px; width:100px;"></td>
-                                                <td>{{$car->name}}</td>
-                                                <td>{{$car->category_id}}</td>
-                                                <td>{{$car->year}}</td>
-                                                <td>{{$car->price}}</td>
-                                                <td>{{$car->color}}</td>
-                                                <td>{{$car->body_style}}</td>
-                                                <td>{{$car->engine}}</td>
-                                                <td>{{$car->transmission}}</td>
-                                                <td>{{$car->fuel_style}}</td>
-                                                <td>{!!$car->description!!}</td>
-                                                <td>{{$car->deal_of_week}}</td>
-                                                <td>{{$car->best_sale}}</td>   
+                                                <td>{{$dress->id}}</td>
+                                                <td><img src="{{asset('img/'.$dress->image)}}" alt="" style="heigh:100px; width:100px;"></td>
+                                                <td>{{$dress->name}}</td>
+                                                <td>{{$dress->category_id}}</td>
+                                                <td>{{$dress->dress_type}}</td>
+                                                <td>{{$dress->price}}</td>
+                                                <td>{{$dress->color}}</td>
+                                                <td>{!!$dress->description!!}</td>
+ 
                                                 <td class="d-flex">
-                                                    <form action="{{route('admin.edit', $car->id)}}" class="mr-2" method="GET">
+                                                    <form action="{{route('admin.edit', $dress->id)}}" class="mr-2" method="GET">
                                                         <button class="btn btn-warning">edit</button>
                                                     </form>
-                                                    <form action="{{route('admin.destroy', $car->id)}}" method="post">
+                                                    <form action="{{route('admin.destroy', $dress->id)}}" method="post">
                                                         <input type="hidden" name="_method" value="delete" /> {{csrf_field()}}
                                                         <button class="btn btn-danger">delete</button>
                                                     </form>

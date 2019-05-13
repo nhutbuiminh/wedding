@@ -10,19 +10,26 @@ use App\Http\Middleware\CheckUser;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//dress & album
 Route::get('/', function () {
     return view('index');
-})->name('home');
+})->name('index');
 Route::get('/left', function(){
-    return view('dresses');
+    return view('dress.index');
 })->name('leftSlidebar');
 Route::get('/right', function(){
-    return view('photography');
+    return view('photography.index');
 })->name('rightSlidebar');
 Route::get('/no', function(){
     return view('weddingServices');
 })->name('noSlidebar');
+Route::get('/detailDress', function(){
+    return view('dress.detail');
+})->name('detaillDress');
+Route::get('/detailAlbum', function(){
+    return view('photography.detail');
+})->name('detailAlbum');
+
 //categories
 Route::get('categories/create', 'CategoryServicesController@create')->name('category.create');
 Route::post('categories/store', 'CategoryServicesController@store')->name('category.store');

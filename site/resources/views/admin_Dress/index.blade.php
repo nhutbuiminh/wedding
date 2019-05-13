@@ -112,7 +112,7 @@
                                             <a href="#">
                                                 <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
                                                 <div class="mail-contnet">
-                                                    <h5>Trương Lâm</h5> <span class="mail-desc">Lâm đẹp trai</span> <span class="time">9:30 AM</span> </div>
+                                                    <h5>Nhut Bui</h5> <span class="mail-desc">Nhut</span> <span class="time">9:30 AM</span> </div>
                                             </a>
                                             <!-- Message -->
                                             <a href="#">
@@ -265,7 +265,7 @@
                         <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{route('album.create')}}">Thêm mới</a></li>
                                 <li><a href="{{route('album.index')}}">Quản lý</a></li>
-                                <li><a href="{{route('album.index')}}">Danh mục tin tức</a></li>
+                                <li><a href="{{route('album.index')}}">Danh mục album</a></li>
                             </ul>
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Sản phẩm</span></a>

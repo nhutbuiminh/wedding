@@ -24,13 +24,13 @@
 					<!-- Logo -->
 						<div id="logo">
 							<h1><a href="#">Sweet Bouquet</a></h1>
-							<p>A free responsive site template by HTML5 UP</p>
+							<p>..................................................</p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="{{route('home')}}" >Home</a></li>
+								<li class="current"><a href="{{route('index')}}" >Home</a></li>
 								<li>
 									<a href="#">Services</a>
 									<ul>
@@ -58,7 +58,7 @@
 							EVERY WEDDING DRESS HAS DESTINATION ITSELF
 							and you would find out yours
 						<br class="mobile-hide" />
- 						<a href="{{route('home')}}" class="nobr">• WHEN YOU TOUCH IT •</a>
+ 						<a href="{{route('index')}}" class="nobr">• WHEN YOU TOUCH IT •</a>
 						</p>
 						<p class="style3">Retelling the sweet love story of each couple, it's also something Sweet Bouquet always puts in a lot of passion for.
 						</p>
@@ -141,8 +141,8 @@
 						<div class="row aln-center">
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('css/images/charisse-kenion-340543-unsplash.jpg')}}" alt="" /></a>
-									<h3><a href="#">Dresses</a></h3>
+									<a href="{{route('leftSlidebar')}}" class="image featured"><img src="{{asset('css/images/charisse-kenion-340543-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="{{route('leftSlidebar')}}">Dresses</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="{{route('leftSlidebar')}}" class="button style1">Learn More</a></li>
@@ -151,8 +151,8 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('css/images/drew-coffman-100876-unsplash.jpg')}}" alt="" /></a>
-									<h3><a href="#">Photography</a></h3>
+									<a href="{{route('rightSlidebar')}}" class="image featured"><img src="{{asset('css/images/drew-coffman-100876-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="{{route('rightSlidebar')}}">Photography</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="{{route('rightSlidebar')}}" class="button style1">Learn More</a></li>
@@ -161,8 +161,8 @@
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="{{asset('css/images/photos-by-lanty-568676-unsplash.jpg')}}" alt="" /></a>
-									<h3><a href="#">Wedding Services</a></h3>
+									<a href="{{route('noSlidebar')}}" class="image featured"><img src="{{asset('css/images/photos-by-lanty-568676-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="{{route('noSlidebar')}}">Wedding Services</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
 										<li><a href="{{route('noSlidebar')}}" class="button style1">Learn More</a></li>

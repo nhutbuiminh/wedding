@@ -15,48 +15,37 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<section id="header" class="wrapper">
+			<section id="header" class="wrapper">
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="{{route('home')}}">Escape Velocity</a></h1>
-							<p>A free responsive site template by HTML5 UP</p>
-						</div>
+<!-- Logo -->
+	<div id="logo">
+		<h1><a href="#">Sweet Bouquet</a></h1>
+		<p>........................................................</p>
+	</div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="{{route('home')}}">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum</a></li>
-										<li><a href="#">Magna veroeros</a></li>
-										<li><a href="#">Etiam nisl</a></li>
-										<li>
-											<a href="#">Sed consequat</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Amet consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Sed feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Nisl tempus</a></li>
-									</ul>
-								</li>
-								<li><a href="{{route('leftSlidebar')}}">Left Sidebar</a></li>
-								<li class="current"><a href="{{route('rightSlidebar')}}">Right Sidebar</a></li>
-								<li><a href="{{route('noSlidebar')}}">No Sidebar</a></li>
-							</ul>
-						</nav>
+<!-- Nav -->
+	<nav id="nav">
+		<ul>
+			<li class="current"><a href="{{route('index')}}" >Home</a></li>
+			<li>
+				<a href="#">Services</a>
+				<ul>
+					<li><a href="#">Lorem ipsum</a></li>
+					<li><a href="#">Magna veroeros</a></li>
+					<li><a href="#">Etiam nisl</a></li>
+				</ul>
+			</li>
+			<li><a href="{{route('leftSlidebar')}}">Dresses</a></li>
+			<li><a href="{{route('rightSlidebar')}}">Album</a></li>
+			<li><a href="{{route('noSlidebar')}}">Contact</a></li>
+		</ul>
+	</nav>
 
-				</section>
+</section>
 
 			<!-- Main -->
 				<section id="main" class="wrapper style2">
-					<div class="title">Right Sidebar</div>
+					<div class="title">ALBUM</div>
 					<div class="container">
 						<div class="row gtr-150">
 							<div class="col-8 col-12-medium">
@@ -198,37 +187,37 @@
 				</section>
 
 			<!-- Highlights -->
-				<section id="highlights" class="wrapper style3">
-					<div class="title">The Endorsements</div>
+			<section id="highlights" class="wrapper style3">
+					<div class="title">Services</div>
 					<div class="container">
 						<div class="row aln-center">
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									<h3><a href="#">Aliquam diam consequat</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/charisse-kenion-340543-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Dresses</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="{{route('leftSlidebar')}}" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/drew-coffman-100876-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Photography</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="{{route('rightSlidebar')}}" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
 							<div class="col-4 col-12-medium">
 								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-									<h3><a href="#">Mattis tempus lorem</a></h3>
+									<a href="#" class="image featured"><img src="{{asset('css/images/photos-by-lanty-568676-unsplash.jpg')}}" alt="" /></a>
+									<h3><a href="#">Wedding Services</a></h3>
 									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
 									<ul class="actions">
-										<li><a href="#" class="button style1">Learn More</a></li>
+										<li><a href="{{route('noSlidebar')}}" class="button style1">Learn More</a></li>
 									</ul>
 								</section>
 							</div>
@@ -237,14 +226,13 @@
 				</section>
 
 			<!-- Footer -->
-				<section id="footer" class="wrapper">
+			<section id="footer" class="wrapper">
 					<div class="title">The Rest Of It</div>
 					<div class="container">
 						<header class="style1">
-							<h2>Ipsum sapien elementum portitor?</h2>
+							<h2>Dễ dàng book chụp hình cưới với MÃ ƯU ĐÃI để được giá tốt hơn</h2>
 							<p>
-								Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-								Nam pharetra laoreet imperdiet volutpat etiam feugiat.
+							Nhiều ưu đãi hơn dành cho bạn. Cam kết giá rẻ hơn & dễ dàng lựa chọn gói chụp và số tờ album.
 							</p>
 						</header>
 						<div class="row">
@@ -252,7 +240,8 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="#">
+										<form method="post" action="{{route('order.store')}}">
+										<input type="hidden" name="_method" value="post" /> {{csrf_field()}}
 											<div class="row gtr-50">
 												<div class="col-6 col-12-small">
 													<input type="text" name="customer_name" id="contact-name" placeholder="Name" />
@@ -271,7 +260,7 @@
 												</div>
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
+														<li><input type="submit" class="style1" value="Send"/></li>
 														<li><input type="reset" class="style2" value="Reset" /></li>
 													</ul>
 												</div>
@@ -309,7 +298,7 @@
 												<section>
 													<h3 class="icon fa-envelope">Email</h3>
 													<p>
-														<a href="#">info@untitled.tld</a>
+														<a href="#">nhutbui2903@gmail.com</a>
 													</p>
 												</section>
 											</div>
@@ -317,7 +306,7 @@
 												<section>
 													<h3 class="icon fa-phone">Phone</h3>
 													<p>
-														(000) 555-0000
+														(84) 2363-78-79-78 
 													</p>
 												</section>
 											</div>
@@ -328,13 +317,14 @@
 						</div>
 						<div id="copyright">
 							<ul>
-								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">Tử Lam</a></li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
 		</div>
+
 
 		<!-- Scripts -->
 		<script src="{{asset('js/jquery.min.js')}}"></script>
